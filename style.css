@@ -1,0 +1,310 @@
+/* Link Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    background-color: #121212;
+}
+
+.container{
+    max-width: 1220px;
+    margin: 0 auto;
+}
+
+/* Banner Style */
+.banner{
+    display: flex;
+    height: 100vh;
+}
+.banner_left{
+    display: flex;
+    align-items: center;
+    color: white;
+    margin-right: 25px;
+}
+.header_title{
+    font-size: 60px;
+    white-space: nowrap;
+    position: relative;
+    color: transparent;
+}
+.header_title::before{
+    content: 'Programming Hero';
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #22bedd;
+    animation: typing 3s linear infinite;
+}
+
+@keyframes typing {
+    0% {
+        content: 'P|';
+    }
+
+    4% {
+        content: 'Pr|';
+    }
+
+    8% {
+        content: 'Pro|';
+    }
+
+    12% {
+        content: 'Prog|';
+    }
+
+    16% {
+        content: 'Progr|';
+    }
+
+    20% {
+        content: 'Progra|';
+    }
+
+    24% {
+        content: 'Program|';
+    }
+
+    28% {
+        content: 'Programm|';
+    }
+
+    32% {
+        content: 'Programmi|';
+    }
+
+    36% {
+        content: 'Programmin|';
+    }
+
+    40% {
+        content: 'Programming|';
+    }
+
+    44% {
+        content: 'Programming |';
+    }
+
+    48% {
+        content: 'Programming H|';
+    }
+
+    52% {
+        content: 'Programming He|';
+    }
+
+    56% {
+        content: 'Programming Her|';
+    }
+
+    60% {
+        content: 'Programming Hero|';
+    }
+
+    64%,
+    83% {
+        content: 'Programming Hero|';
+    }
+
+    84% {
+        content: 'Programming Her|';
+    }
+
+    85% {
+        content: 'Programming He|';
+    }
+
+    86% {
+        content: 'Programming H|';
+    }
+
+    87% {
+        content: 'Programming |';
+    }
+
+    88% {
+        content: 'Programming|';
+    }
+
+    89% {
+        content: 'Programmin|';
+    }
+
+    90% {
+        content: 'Programmi|';
+    }
+
+    91% {
+        content: 'Programm|';
+    }
+
+    92% {
+        content: 'Program|';
+    }
+
+    93% {
+        content: 'Progra|';
+    }
+
+    94% {
+        content: 'Progr|';
+    }
+
+    95% {
+        content: 'Prog|';
+    }
+
+    96% {
+        content: 'Pro|';
+    }
+
+    97% {
+        content: 'Pr|';
+    }
+
+    98% {
+        content: 'P|';
+    }
+
+    99% {
+        content: '|';
+    }
+
+    100% {
+        content: '|';
+    }
+}
+
+.header_text{
+    line-height: 1.6;
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+.btn{
+    padding: 12px 43px;
+    font-size: 1.3em;
+    font-weight: 550;
+    outline: none;
+    background-color: #22bedd;
+    border: 3px solid #22bedd;
+    transition: .4s linear;
+}
+.btn:hover{
+    background-color: #121212;
+    color: #22bedd;
+}
+.banner_right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner_right img{
+    border: 5px solid #22bedd;
+}
+
+
+/* Gallery Section */
+.gallery_titile{
+    text-align: center;
+    color: #22bedd;
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+.gallery{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.photo{
+    height: 280px;
+    width: 280px;
+    position: relative;
+    transition: .4s linear;
+    overflow: hidden;
+}
+.photo img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.border{
+    background-color: #fff;
+    position: absolute;
+    transition: .4s linear;
+}
+.border.top, .border.bottom{
+    height: 2px;
+    width: 270px;
+}
+.border.left, .border.right{
+    width: 2px;
+    height: 270px;
+}
+.border.top{
+    top: 5px;
+    right: 100%;
+}
+.border.bottom{
+    bottom: 5px;
+    left: 100%;
+}
+.border.left{
+    left: 5px;
+    top: 100%;
+}
+.border.right{
+    right: 5px;
+    bottom: 100%;
+}
+.photo:hover .border.top{
+    right: 5px;
+}
+.photo:hover .border.bottom{
+    left: 5px;
+}
+.photo:hover .border.left{
+    top: 5px;
+}
+.photo:hover .border.right{
+    bottom: 5px;
+}
+.photo_content{
+    color: white;
+    text-align: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding-top: 200px;
+    top: 0;
+    left: 0;
+    transform: translateY(400px);
+    opacity: 0;
+    transition: .4s linear;
+    z-index: 2;
+}
+.photo::before{
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.541);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: .4s linear;
+}
+.photo:hover .photo_content{
+    opacity: 1;
+    transform: translateY(0);
+}
+.photo:hover::before{
+    opacity: 1;
+}
